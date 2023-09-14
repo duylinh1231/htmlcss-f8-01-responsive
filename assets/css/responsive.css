@@ -1,0 +1,268 @@
+/* PC */
+@media screen and (min-width: 992px) {
+    .show-on-mobile {
+        display: none;
+    }
+
+    .mobile-header {
+        display: none;
+    }
+}
+
+/* tablet & mobile */
+@media screen and (max-width: 991px) {
+    .navbar {
+        position: relative;
+    }
+
+    .navbar .logo {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .navbar ul {
+        display: none;
+    }
+
+    .toggle-menu svg {
+        color: var(--primary-color);
+        width: 24px;
+    }
+
+    .mobile-header .menu-overlay {
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.3);
+        z-index: 1;
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.5s ease;
+    }
+
+    .mobile-header .menu-drawer {
+        position: fixed;
+        inset: 0 40% 0 0;
+        padding: 60px;
+        background: #fff;
+        z-index: 2;
+        transform: translateX(-100%);
+        transition: 0.5s ease;
+    }
+
+    .menu-drawer ul {
+        margin-top: 32px;
+    }
+
+    .menu-drawer ul a {
+        font-weight: 500;
+        display: block;
+        padding: 14px 0;
+        color: #333;
+    }
+
+    .menu-checkbox:checked ~ .menu-overlay {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .menu-checkbox:checked ~ .menu-drawer {
+        transform: translateX(0);
+    }
+
+    .separate {
+        border-top: 1.5px solid #ebebeb;
+    }
+
+    .hero-img {
+        display: none;
+    }
+
+    .hero-wrap .info {
+        margin: 0 auto;
+        text-align: center;
+        width: 80%;
+    }
+
+    .hero .desc {
+        margin: 30px auto auto;
+        width: 80%;
+    }
+
+    .clients .images {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .guides-item {
+        margin: 0;
+        flex: 1;
+    }
+
+    .featured .list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .stats .row {
+        flex-direction: column;
+    }
+
+    .stats .info {
+        padding: 0;
+        width: 70%;
+    }
+
+    .stats .info .desc {
+        width: 100%;
+    }
+
+    .info {
+        order: 1;
+    }
+
+    .stats .img-block {
+        margin-top: 80px;
+        order: 2;
+        width: 90%;
+    }
+
+    .stats .info .sub-title {
+        width: 100%;
+    }
+
+    .stats .row-qty {
+        flex-direction: row;
+    }
+
+    .stats .qty {
+        font-size: 50px;
+    }
+
+    .stats .qty-desc {
+        font-size: 15px;
+    }
+
+    .subscribe .info {
+        padding: 0 30px;
+    }
+
+    .subscribe .image {
+        right: -3px;
+    }
+
+    .footer .row-top {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+    }
+
+    .row-bottom {
+        flex-direction: row;
+    }
+}
+
+/* tablet */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .show-on-mobile {
+        display: none !important;
+    }
+}
+
+/* mobile */
+@media screen and (max-width: 767px) {
+    .hide-on-mobile {
+        display: none;
+    }
+
+    .fixed-header .actions {
+        display: none;
+    }
+
+    .mobile-header .menu-drawer {
+        padding: 40px;
+        inset: 0 25% 0 0;
+    }
+
+    .hero-wrap {
+        height: calc(100vh - 80px);
+    }
+
+    .hero .title {
+        margin-top: 30px;
+        width: 100%;
+        font-size: 4.6rem;
+    }
+
+    .hero .desc {
+        width: 100%;
+    }
+
+    .clients .images {
+        row-gap: 20px;
+    }
+
+    .list-guides {
+        flex-direction: column;
+        row-gap: 40px;
+    }
+
+    .guides-cta {
+        margin-top: 60px;
+    }
+
+    .featured .row .link {
+        display: none;
+    }
+
+    .featured .sub-title {
+        font-size: 3.4rem;
+    }
+
+    .featured .list {
+        grid-template-columns: 1fr;
+    }
+
+    .featured .view-all {
+        display: flex;
+        justify-content: center;
+        margin-top: 24px;
+    }
+
+    .stats .info {
+        width: 100%;
+    }
+
+    .stats .img-block .image {
+        width: 100%;
+    }
+
+    .stats .img-block .stats-trend {
+        top: -1px;
+        left: 32px;
+    }
+
+    .stats .row-qty {
+        flex-direction: column;
+        row-gap: 40px;
+        text-align: center;
+    }
+
+    .subscribe .image {
+        display: none;
+    }
+
+    .subscribe .info {
+        width: 100%;
+        padding: 30px;
+    }
+
+    .footer .row-top {
+        grid-template-columns: 1fr;
+        gap: 90px;
+    }
+
+    .footer .row-bottom {
+        flex-direction: column;
+        row-gap: 30px;
+    }
+}
